@@ -1,5 +1,37 @@
 <html>
 <head>
+
+  <STYLE type=text/css>
+.sample-box {
+    position: relative;
+}
+
+.good {    
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.video-box {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: -100;
+}
+
+.youtube-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  min-width: 1920px;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+}
+  </STYLE>
+    
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,5 +46,21 @@
 </head>
 
 <body>
+
+<div class="sample-box">
+
+<section class="wrap">
+  <div class="video-box overlay">
+    <iframe class="youtube-video" src="https://www.youtube.com/embed/xOWLObaUIfU?autoplay=1&mute=1&playsinline=1&loop=1&controls=0&disablekb=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</section>
+
+    <div class="good">
+        <div id="test"></div>
+    </div>
+</div>
+
+
+
 </body>
 </html>
